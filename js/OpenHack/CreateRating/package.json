@@ -1,0 +1,8 @@
+{
+    "name": "create-rating",
+    "description": "CreateRating Function for Challenge 2 MS OpenHack",
+    "dependencies": {
+        "node-fetch": "^2.2.0",
+        "uuid": "^3.3.2"
+    }
+}

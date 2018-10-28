@@ -1,0 +1,28 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "ratingRecord",
+      "type": "cosmosDB",
+      "databaseName": "jebronlames",
+      "collectionName": "Challenge2",
+      "sqlQuery": "select c.id,c.userId,c.productId,c.timestamp,c.locationName,c.rating,c.userNotes from c where c.userId = {userId}",
+      "connectionStringSetting": "COSMODB_CONNECTION",     
+      "direction": "in"
+    }
+  ]
+}
